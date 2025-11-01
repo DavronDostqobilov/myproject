@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Sustainable Development Goals</h2>
+
+    <div class="row g-4">
+
+        {% comment %}
+        17 ta rasm — PNG format
+        rasm nomlari: report1.png ... report17.png
+        pdf nomlari: report1.pdf ... report17.pdf
+        {% endcomment %}
+
+        {% for i in "123456789abcdefg123"|slice:":17" %}
+        <div class="col-6 col-md-4 col-lg-3">
+            <a href="{% static 'pdf/SamDCHTI_SDG' %}{{ forloop.counter }}.pdf" target="_blank">
+                <div class="card shadow-sm hover-card">
+                    <img src="{% static 'images/p' %}{{ forloop.counter }}.png"
+                         class="card-img-top report-img"
+                         alt="Report {{ forloop.counter }}">
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+<style>
+.hover-card {
+    width: 100%;
+    height: 140px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 0; /* ✅ Bo‘sh joyni tugatdik */
+    border: 2px solid #e0e0e0;
+    transition: 0.25s ease;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.report-img {
+    width: 100%;      /* ✅ Kartani to‘liq egallaydi */
+    height: 100%;     /* ✅ Bo‘sh joy qoldirmaydi */
+    object-fit: contain;
+    border-radius: 14px;  /* ✅ Chiroyli yumaloq burchaklar */
+}
+
+
+
+
+
+</style>
+{% endblock %}
