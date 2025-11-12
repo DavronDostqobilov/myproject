@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Decent Work and Economic Growth</h2>
+
+    <div class="list-group">
+
+        <a href="{% url 'economic1' %}" target="_blank" class="list-group-item list-group-item-action">
+            Comprehensive Human Resources Reforms at Samarkand State Institute of Foreign Languages
+        </a>
+
+        <a href="{% url 'economic2' %}" target="_blank" class="list-group-item list-group-item-action">
+            The comprehensive HR policy
+        </a>
+
+        <a href="{% url 'economic3' %}" target="_blank" class="list-group-item list-group-item-action">
+            Human Resources and Career Development Initiatives at Samarkand State Institute of Foreign Languages
+        </a>
+
+    </div>
+</div>
+{% endblock %}

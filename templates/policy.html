@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">University Policies</h2>
+
+    <div class="row">
+
+        {% for i in policies %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="{% static 'images/policy' %}{{ i }}.png" class="card-img-top" alt="Policy Image">
+                <div class="card-body text-center">
+                    <a href="{% static 'pdf/policy' %}{{ i }}.pdf" 
+                       target="_blank" 
+                       class="btn btn-primary w-100">
+                       Open PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

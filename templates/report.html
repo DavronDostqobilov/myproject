@@ -2,15 +2,35 @@
 {% load static %}
 
 {% block content %}
-<div class="container mt-5 mb-5">
+
+<!-- ✅ Banner + Title -->
+<div class="container mt-4">
     <h2 class="text-center mb-4">Sustainable Development Goals</h2>
+    <!-- Banner rasm -->
+    <div class="text-center mb-3">
+        <img src="{% static 'images/sdg-uj.jpg' %}" 
+             class="img-fluid rounded shadow"
+             alt="SDG Banner">
+    </div>
+
+    <!-- Title (pdfga link) -->
+    <h2 class="text-center mt-3">
+        <a href="{% static 'pdf/SamSIFL_SDG_report_for_2024_new.pdf' %}" 
+           target="_blank"
+           class="text-decoration-none fw-bold"
+           style="color: #002244; font-size: 32px;">
+            SamSIFL's SDG REPORT 2024
+        </a>
+    </h2>
+</div>
+
+
+<div class="container mt-5 mb-5">
 
     <div class="row g-4">
 
         {% comment %}
-        17 ta rasm — PNG format
-        rasm nomlari: report1.png ... report17.png
-        pdf nomlari: report1.pdf ... report17.pdf
+        Avtomatik 17 ta karta — PNG + PDF
         {% endcomment %}
 
         {% for i in "123456789abcdefg123"|slice:":17" %}
@@ -34,7 +54,7 @@
     height: 140px;
     background: #ffffff;
     border-radius: 14px;
-    padding: 0; /* ✅ Bo‘sh joyni tugatdik */
+    padding: 0;
     border: 2px solid #e0e0e0;
     transition: 0.25s ease;
     overflow: hidden;
@@ -50,15 +70,12 @@
 }
 
 .report-img {
-    width: 100%;      /* ✅ Kartani to‘liq egallaydi */
-    height: 100%;     /* ✅ Bo‘sh joy qoldirmaydi */
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    border-radius: 14px;  /* ✅ Chiroyli yumaloq burchaklar */
+    border-radius: 14px;
 }
 
-
-
-
-
 </style>
+
 {% endblock %}

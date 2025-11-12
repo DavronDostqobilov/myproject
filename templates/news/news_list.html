@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.news-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform .18s, box-shadow .18s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.news-thumb {
+    width: 100%;
+    height: 200px;
+    background: #f3f3f3;
+    object-fit: contain; /* full image without cropping */
+    display: block;
+}
+
+/* BODY */
+.news-body {
+    padding: 14px 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title area: make it a link */
+.news-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    color: #0b2540;
+    text-decoration: none;
+}
+
+/* Date aligned at bottom-left and button bottom-right in footer */
+.news-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    gap: 10px;
+}
+
+/* Date */
+.news-date {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Batafsil button */
+.read-btn {
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background .15s, transform .12s;
+}
+.read-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Make entire image & title clickable via .news-link */
+.news-link { text-decoration: none; color: inherit; }
+
+/* Small screens */
+@media (max-width: 576px) {
+    .news-thumb { height: 160px; }
+    .news-title { font-size: 16px; }
+    .read-btn { font-size: 13px; padding: 7px 10px; }
+}
+</style>
+
+<div class="container mt-4">
+    <h2 class="mb-4">News</h2>
+
+    <div class="news-grid">
+        {% for n in news %}
+        <div class="news-card">
+
+            {% if n.image %}
+                <a class="news-link" href="{% url 'news_detail' n.id %}">
+                    <img src="{{ n.image.url }}" alt="{{ n.title }}" class="news-thumb">
+                </a>
+            {% else %}
+                <a class="news-link" href="{% url 'news_detail' n.id %}">
+                    <div class="news-thumb"></div>
+                </a>
+            {% endif %}
+
+            <div class="news-body">
+                <a class="news-link" href="{% url 'news_detail' n.id %}">
+                    <h3 class="news-title">{{ n.title }}</h3>
+                </a>
+
+                <div class="news-footer">
+                    <div class="news-date">{{ n.created_at|date:"Y-m-d" }}</div>
+                    <a class="read-btn" href="{% url 'news_detail' n.id %}">More</a>
+                </div>
+            </div>
+
+        </div>
+        {% empty %}
+        <p>Hozircha yangiliklar yo‘q.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

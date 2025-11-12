@@ -1,0 +1,24 @@
+<!-- Peace, Justice and Strong Institutions -->
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Peace, Justice and Strong Institutions</h2>
+
+    <div class="list-group">
+
+        <a href="{% url 'partnerships1' %}" target="_blank" class="list-group-item list-group-item-action">
+            Academic Governance, Quality Assurance, and Anti-Corruption Measures in Samarkand State Institute of Foreign Languages
+        </a>
+
+        <a href="{% url 'partnerships2' %}" target="_blank" class="list-group-item list-group-item-action">
+            Academic Governance, Quality Assurance, and Anti-Corruption Measures in Samarkand State Institute of Foreign Languages 1/2
+        </a>
+
+    </div>
+</div>
+
+{% endblock %}

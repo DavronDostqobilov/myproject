@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Gender Equality</h2>
+
+    <div class="list-group">
+
+        <a href="{% url 'gender1' %}" target="_blank" class="list-group-item list-group-item-action">
+            Gender Equality and Female Empowerment Policy at Samarkand State Institute of Foreign Languages
+        </a>
+
+        <a href="{% url 'gender2' %}" target="_blank" class="list-group-item list-group-item-action">
+            Elimination of Discrimination
+        </a>
+
+        <a href="{% url 'gender3' %}" target="_blank" class="list-group-item list-group-item-action">
+            Welfare
+        </a>
+
+        <a href="{% url 'gender4' %}" target="_blank" class="list-group-item list-group-item-action">
+            Leadership
+        </a>
+
+        <a href="{% url 'gender5' %}" target="_blank" class="list-group-item list-group-item-action">
+            SamSIFL Admission Advantages
+        </a>
+
+
+    </div>
+</div>
+
+{% endblock %}

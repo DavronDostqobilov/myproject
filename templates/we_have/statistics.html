@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Statistics - SDG{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Statistics</h1>
+
+
+    <div class="container mt-4">
+    <!-- Block 1 -->
+    <div class="mb-5">
+        <h4 class="fw-bold mb-3 pb-2 border-bottom">The majority of students at the Samarkand State Institute of Foreign Languages</h4>
+        <img src="{% static 'images/statistic1.png' %}" class="img-fluid rounded shadow-sm" alt="Student chart">
+        <p class="text-muted mt-2">The majority of students at the Samarkand State Institute of Foreign Languages are female and under the age of 30. Most are enrolled in full-time programs. The student body primarily consists of citizens of the Republic of Uzbekistan, with a small number of international and stateless students.</p>
+    </div>
+
+
+    <!-- Block 2 -->
+    <div class="mb-5">
+        <h4 class="fw-bold mb-3 pb-2 border-bottom">Overview of the teaching staff</h4>
+        <img src="{% static 'images/statistic2.png' %}" class="img-fluid rounded shadow-sm" alt="Teaching staff chart">
+        <p class="text-muted mt-2">The charts provide an overview of the teaching staff, including their gender distribution, age groups, and academic qualifications.</p>
+    </div>
+
+
+    <!-- Block 3 -->
+    <div class="mb-5">
+        <h4 class="fw-bold mb-3 pb-2 border-bottom">Teachers by citizenship, position and field of study</h4>
+        <img src="{% static 'images/statistic3.png' %}" class="img-fluid rounded shadow-sm" alt="Staff composition chart">
+        <p class="text-muted mt-2">The charts illustrate the composition of teachers by citizenship, academic position, and field of study, providing an overview of staff distribution across different categories.</p>
+    </div>
+
+
+    <!-- Block 4 -->
+    <div class="mb-5">
+        <h4 class="fw-bold mb-3 pb-2 border-bottom">Additional staff distribution</h4>
+        <img src="{% static 'images/statistic4.png' %}" class="img-fluid rounded shadow-sm" alt="Additional staff chart">
+        <p class="text-muted mt-2">The charts illustrate the composition of teachers by citizenship, academic position, and field of study, providing an overview of staff distribution across different categories.</p>
+    </div>
+    <!-- Block 5 -->
+    <div class="mb-5">
+        <h4 class="fw-bold mb-3 pb-2 border-bottom">This chart demonstrates the number of certified students in three years in SamSIFL</h4>
+        <img src="{% static 'images/statistic5.png' %}" class="img-fluid rounded shadow-sm" alt="Additional staff chart">
+    </div>
+</div>
+{% endblock %}

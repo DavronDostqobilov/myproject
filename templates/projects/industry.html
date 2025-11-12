@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Industry, Innovation and Infrastructure</h2>
+
+    <div class="list-group">
+
+        <a href="{% url 'industry1' %}" target="_blank" class="list-group-item list-group-item-action">
+            Fostering Innovation and Start-Up Initiatives at Samarkand State Institute of Foreign Languages
+        </a>
+
+        <a href="{% url 'industry2' %}" target="_blank" class="list-group-item list-group-item-action">
+            Empowering Innovation and International Engagement: SamSIFL's Commitment to Entrepreneurship and Academic Excellence
+        </a>
+
+        <a href="{% url 'industry3' %}" target="_blank" class="list-group-item list-group-item-action">
+            Empowering Student-Led Initiatives and Advancing Scientific Innovation at SamSIFL
+        </a>
+
+
+    </div>
+</div>
+
+{% endblock %}

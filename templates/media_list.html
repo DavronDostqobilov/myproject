@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-3">Media</h2>
+
+    {% for m in media %}
+    <div class="card mb-4 shadow-sm">
+        {% if m.thumbnail %}
+            <img src="{{ m.thumbnail.url }}" class="card-img-top" alt="{{ m.title }}">
+        {% endif %}
+
+        <div class="card-body">
+            <h4>{{ m.title }}</h4>
+            <p>{{ m.description }}</p>
+
+            <!-- YouTube embed -->
+            <div class="ratio ratio-16x9">
+                <iframe width="400" height="315" src="{{ m.embed_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <p class="text-muted mt-2">{{ m.created_at|date:"Y-m-d" }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

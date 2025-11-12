@@ -74,10 +74,15 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# settings.py
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sdg_db',                      # 2-bosqichda yaratgan bazangiz
+        'USER': 'admin',                   # 2-bosqichda yaratgan foydalanuvchi
+        'PASSWORD': 'ujr956u57pfi', # O'sha parolingiz
+        'HOST': 'localhost',                        # Serverning o'zida bo'lgani uchun 'localhost'
+        'PORT': '5432',                                 # Standart port (5432) ishlatiladi
     }
 }
 
@@ -117,7 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 # 1. Loyiha statik fayllarining manbasi (Sizning loyiha kodingizdagi .html, .css va .js fayllari joylashgan joy).
 # Bu yerda sizning logo_white.png faylingiz turgan joy bo'ladi.
 STATICFILES_DIRS = [

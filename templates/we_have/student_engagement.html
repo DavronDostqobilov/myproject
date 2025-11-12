@@ -1,0 +1,339 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Student's Engagement - SDG{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Student's Engagement</h1>
+
+    <div class="mx-auto" style="max-width: 900px;">
+
+        <!-- Statistics -->
+        <a href="{% url 'statistics' %}" class="text-decoration-none">
+            <div class="d-flex align-items-center my-4">
+                <div class="flex-grow-1 border-bottom border-3" style="border-color: #002244;"></div>
+                <span class="px-3 fw-bold fs-3" style="color: #002244;">Statistics</span>
+                <div class="flex-grow-1 border-bottom border-3" style="border-color: #002244;"></div>
+            </div>
+        </a>
+
+        <!-- Clubs -->
+        <div class="d-flex align-items-center my-4">
+            <div class="flex-grow-1 border-bottom border-3" style="border-color: #002244;"></div>
+            <span class="px-3 fw-bold fs-3" style="color: #002244;">Clubs</span>
+            <div class="flex-grow-1 border-bottom border-3" style="border-color: #002244;"></div>
+        </div>
+
+        <!-- Clubs Title -->
+        <h5 class="fw-bold mb-3 pb-2 border-bottom" style="color: #002244;">ZAKOVAT Club Activities at SamSIFL</h5>
+
+        <!-- 8 Images -->
+        <div class="row g-3 mb-2">
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club1_1.jpg' %}" class="img-fluid rounded" alt="Club 1">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club1_2.jpg' %}" class="img-fluid rounded" alt="Club 2">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club1_3.jpg' %}" class="img-fluid rounded" alt="Club 3">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club1_4.jpg' %}" class="img-fluid rounded" alt="Club 4">
+            </div>
+
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club1_5.jpg' %}" class="img-fluid rounded" alt="Club 5">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club1_6.jpg' %}" class="img-fluid rounded" alt="Club 6">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club1_7.jpg' %}" class="img-fluid rounded" alt="Club 7">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club1_8.jpg' %}" class="img-fluid rounded" alt="Club 8">
+            </div>
+        </div>
+
+
+        <!-- Single Comment -->
+        <p class="small text-muted mt-2 text-justify">
+            At the Samarkand State Institute of Foreign Languages (SamSIFL), ZAKOVAT intellectual quiz competitions 
+            are regularly organized through the initiative of the Youth Union and various academic departments. 
+            These events aim to enhance students’ critical thinking, teamwork, and general knowledge.
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            The institute also has an active ZAKOVAT Club, which operates continuously throughout the academic year. 
+            The club not only prepares teams for internal tournaments but also represents SamSIFL in city and regional 
+            intellectual competitions. Through these activities, students develop their intellectual abilities, 
+            communication skills, and creative problem-solving capacity.
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            ZAKOVAT at SamSIFL has become an essential part of the university’s intellectual and cultural life, 
+            fostering a spirit of curiosity, friendship, and healthy competition among students.
+        </p>
+
+        <!-- Clubs 2 Title -->
+        <h5 class="fw-bold mb-3 pb-2 border-bottom" style="color: #002244;">Booklovers' Club Activities at SamSIFL</h5>
+
+        <!-- 8 Images -->
+        <div class="row g-3 mb-2">
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club2_1.jpg' %}" class="img-fluid rounded" alt="Club 1">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club2_2.jpg' %}" class="img-fluid rounded" alt="Club 2">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club2_3.jpg' %}" class="img-fluid rounded" alt="Club 3">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club2_5.jpg' %}" class="img-fluid rounded" alt="Club 5">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club2_7.jpg' %}" class="img-fluid rounded" alt="Club 7">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club2_4.jpg' %}" class="img-fluid rounded" alt="Club 4">
+            </div>
+        
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club2_8.jpg' %}" class="img-fluid rounded" alt="Club 8">
+            </div>
+        </div>
+
+
+        <!-- Single Comment -->
+        <p class="small text-muted mt-2 text-justify">
+            REPORT ON THE IMPLEMENTATION OF THE FOURTH INITIATIVE AT SAMSIFL
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            The fourth initiative of the Five Important Initiatives put forward by the President of the Republic of Uzbekistan is 
+            aimed at enhancing the spiritual and cultural awareness of young people and promoting reading culture among them.
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            In line with this initiative, the Samarkand State Institute of Foreign Languages (SamSIFL) regularly organizes various activities to foster students’ interest in literature and to ensure their free time is spent meaningfully.
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            One of the key projects within this framework is the “Discussion of a Literary Work” event, which is held every week. During these discussion sessions, students analyze and exchange opinions about famous literary works, share their reflections, and explore the moral and cultural values reflected in the texts
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            These activities play an important role in developing students’ critical thinking, communication skills, and love for reading. They also contribute to the creation of a spiritually rich academic environment at SamSIFL, encouraging young people to value knowledge, creativity, and culture.
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            Overall, the implementation of the fourth initiative at SamSIFL has proven to be an effective way to nurture intellectual curiosity, strengthen cultural awareness, and support the personal growth of students.
+        </p>
+
+        <!-- Clubs 3 Title -->
+        <h5 class="fw-bold mb-3 pb-2 border-bottom" style="color: #002244;">Student Theater Studio Club Activities at SamSIFL</h5>
+
+        <!-- 8 Images -->
+        <div class="row g-3 mb-2">
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_1.jpg' %}" class="img-fluid rounded" alt="Club 1">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_2.jpg' %}" class="img-fluid rounded" alt="Club 2">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_3.jpg' %}" class="img-fluid rounded" alt="Club 3">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_4.jpg' %}" class="img-fluid rounded" alt="Club 4">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_5.jpg' %}" class="img-fluid rounded" alt="Club 5">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_6.jpg' %}" class="img-fluid rounded" alt="Club 6">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_7.jpg' %}" class="img-fluid rounded" alt="Club 7">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_8.jpg' %}" class="img-fluid rounded" alt="Club 8">
+            </div>
+        </div>
+
+
+        <!-- Single Comment -->
+        <p class="small text-muted mt-2 text-justify">
+            REPORT ON THE ESTABLISHMENT OF THE STUDENT THEATER STUDIO AT SAMSIFL
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            In order to further enrich the cultural and creative life of students, a Student Theater Studio has been established at the Samarkand State Institute of Foreign Languages (SamSIFL). The initiative aims to discover and support talented young people, enhance their artistic skills, and promote the values of national culture and creativity among students.
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            More than 50 students from various faculties have actively joined the Theater Studio. They regularly participate in acting workshops, rehearsals, and stage performances organized under the guidance of experienced mentors and teachers
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            The activities of the Student Theater Studio provide students with an opportunity to express themselves artistically, develop their self-confidence, and strengthen their teamwork and communication abilities. Performances prepared by the studio are often showcased during institute-wide cultural events and festive celebrations, receiving great interest and appreciation from the audience.
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            The establishment of the Theater Studio at SamSIFL reflects the institute’s commitment to supporting youth creativity and fostering a vibrant cultural environment on campus. It serves as an important platform for nurturing talented, expressive, and culturally aware young individuals.
+        </p>
+
+
+
+        <!-- Events -->
+        <div class="d-flex align-items-center my-4">
+            <div class="flex-grow-1 border-bottom border-3" style="border-color: #002244;"></div>
+            <span class="px-3 fw-bold fs-3" style="color: #002244;">Events</span>
+            <div class="flex-grow-1 border-bottom border-3" style="border-color: #002244;"></div>
+        </div>
+               <!-- Events 1 Title -->
+        <h5 class="fw-bold mb-3 pb-2 border-bottom" style="color: #002244;">Booklover girls</h5>
+
+        <!-- 8 Images -->
+        <div class="row g-3 mb-2">
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/event1_1.jpg' %}" class="img-fluid rounded" alt="Events 1">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/event1_2.jpg' %}" class="img-fluid rounded" alt="Events 2">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/event1_3.jpg' %}" class="img-fluid rounded" alt="Events 3">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/event1_4.jpg' %}" class="img-fluid rounded" alt="Events 4">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/event1_5.jpg' %}" class="img-fluid rounded" alt="Events 5">
+            </div>
+            <!-- <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_6.jpg' %}" class="img-fluid rounded" alt="Club 6">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_7.jpg' %}" class="img-fluid rounded" alt="Club 7">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="{% static 'images/club3_8.jpg' %}" class="img-fluid rounded" alt="Club 8">
+            </div> -->
+        </div>
+
+
+        <!-- Single Comment -->
+        <p class="small text-muted mt-2 text-justify">
+            In line with the fourth direction of the Five Important Initiatives proposed by the President of the Republic of Uzbekistan — which aims to enhance youth spirituality and promote reading culture among students — the “Booklover  Student” (“Kitobxon Talaba”) Contest was held at the Samarkand State Institute of Foreign Languages (SamSIFL).
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            At the beginning of the event, members of the organizing committee explained the rules and conditions of the contest to all participants. Then, in accordance with the competition regulations, students’ knowledge and reading comprehension were tested.
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            Among the talented participants, Marjona Tolibova and O‘g‘iloy Boltaboyeva, first-year students of the Faculty of English Philology and Translation Studies, distinguished themselves with their knowledge and insight, earning 50 points each and becoming the winners of the contest.
+        </p>
+
+        <p class="small text-muted mt-2 text-justify">
+            The “Booklover Student” competition serves as an important initiative aimed at guiding young people toward knowledge and intellectual growth, encouraging them to make books their closest companions. Such activities play a vital role in developing reading culture, improving the quality of education, and fostering a spiritually rich learning environment at SamSIFL.
+        </p>
+
+        <!-- Volunteers -->
+        <div class="d-flex align-items-center my-4">
+            <div class="flex-grow-1 border-bottom border-3" style="border-color: #002244;"></div>
+            <span class="px-3 fw-bold fs-3" style="color: #002244;">Volunteers</span>
+            <div class="flex-grow-1 border-bottom border-3" style="border-color: #002244;"></div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row text-center g-4">
+
+                <!-- 1 -->
+                <div class="col-6 col-md-4">
+                    <div class="p-3">
+                        <img src="/static/images/v1_1.jpg" class="vol-img mb-2">
+                        <p class="m-0 fw-semibold">Iskanderova Shirin Daniyarovna</p>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="col-6 col-md-4">
+                    <div class="p-3">
+                        <img src="/static/images/v2.jpg" class="vol-img mb-2">
+                        <p class="m-0 fw-semibold">Shokirova Chinora Dilshodovna</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="col-6 col-md-4">
+                    <div class="p-3">
+                        <img src="/static/images/v3.jpg" class="vol-img mb-2">
+                        <p class="m-0 fw-semibold">Sobirova Muazzam Abdulfattox qizi</p>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="col-6 col-md-4">
+                    <div class="p-3">
+                        <img src="/static/images/v4.jpg" class="vol-img mb-2">
+                        <p class="m-0 fw-semibold">Akramov Azizbek Hasan o'g'li</p>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="col-6 col-md-4">
+                    <div class="p-3">
+                        <img src="/static/images/v5_1.jpg" class="vol-img mb-2">
+                        <p class="m-0 fw-semibold">Murodullayeva Sevinch Sohibjon qizi</p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="col-6 col-md-4">
+                    <div class="p-3">
+                        <img src="/static/images/v6.jpg" class="vol-img mb-2">
+                        <p class="m-0 fw-semibold">Mustafaqulova Mahliyo Bahodir qizi</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <div class="p-3">
+                        <img src="/static/images/v7.jpg" class="vol-img mb-2">
+                        <p class="m-0 fw-semibold">Po'latov Samandar Abdihakimovich</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="p-3">
+                        <img src="/static/images/v9.jpg" class="vol-img mb-2">
+                        <p class="m-0 fw-semibold">Jamuradova Zarnigor Karim qizi</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center my-4">
+            <a href="/static/pdf/ОЛИЙ_ТАЪЛИМ,_ФАН_ВА_ИННОВАЦИЯЛАР_ВАЗИРЛИГИ_2.pdf" target="_blank" class="btn btn-primary px-4 py-2"
+                style="background-color:#002244; border:none; font-size:1.3rem; border-radius:10px;">
+                Volunteers Album
+            </a>
+        </div>
+
+    </div>
+</div>
+<style>
+    .vol-img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+</style>
+{% endblock %}

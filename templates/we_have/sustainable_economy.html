@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Sustainable economy{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="card shadow-sm border-0" style="max-width: 700px; width: 100%;">
+        <img src="{% static 'images/economy1.png' %}" class="card-img-top" 
+             alt="Image 1" style="width: 100%; height: auto;">
+    </div>
+</div>
+
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="card shadow-sm border-0" style="max-width: 700px; width: 100%;">
+        <img src="{% static 'images/economy2.png' %}" class="card-img-top" 
+             alt="Image 2" style="width: 100%; height: auto;">
+    </div>
+</div>
+
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="card shadow-sm border-0" style="max-width: 700px; width: 100%;">
+        <img src="{% static 'images/economy3.png' %}" class="card-img-top" 
+             alt="Image 3" style="width: 100%; height: auto;">
+    </div>
+</div>
+
+{% endblock %}
