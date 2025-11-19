@@ -1,0 +1,20 @@
+[0;1;32m*[0m gunicorn.service - gunicorn daemon for Django project
+     Loaded: loaded (]8;;file://sdg/etc/systemd/system/gunicorn.service/etc/systemd/system/gunicorn.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Tue 2025-11-18 13:12:14 UTC; 4s ago
+   Main PID: 5707 (gunicorn)
+      Tasks: 4 (limit: 153445)
+     Memory: 111.1M (peak: 111.5M)
+        CPU: 700ms
+     CGroup: /system.slice/gunicorn.service
+             |-[0;38;5;245m5707 /var/www/myproject/venv/bin/python3 /var/www/myproject/venv/bin/gunicorn myproject.wsgi:application --workers 3 --worker-class gevent --bind 127.0.0.1:8000 --max-requests 800 --max-requests-jitter 200 --timeout 120 --log-level info[0m
+             |-[0;38;5;245m5708 /var/www/myproject/venv/bin/python3 /var/www/myproject/venv/bin/gunicorn myproject.wsgi:application --workers 3 --worker-class gevent --bind 127.0.0.1:8000 --max-requests 800 --max-requests-jitter 200 --timeout 120 --log-level info[0m
+             |-[0;38;5;245m5709 /var/www/myproject/venv/bin/python3 /var/www/myproject/venv/bin/gunicorn myproject.wsgi:application --workers 3 --worker-class gevent --bind 127.0.0.1:8000 --max-requests 800 --max-requests-jitter 200 --timeout 120 --log-level info[0m
+             `-[0;38;5;245m5710 /var/www/myproject/venv/bin/python3 /var/www/myproject/venv/bin/gunicorn myproject.wsgi:application --workers 3 --worker-class gevent --bind 127.0.0.1:8000 --max-requests 800 --max-requests-jitter 200 --timeout 120 --log-level info[0m
+
+Nov 18 13:12:14 sdg systemd[1]: Started gunicorn.service - gunicorn daemon for Django project.
+Nov 18 13:12:14 sdg gunicorn[5707]: [2025-11-18 13:12:14 +0000] [5707] [INFO] Starting gunicorn 23.0.0
+Nov 18 13:12:14 sdg gunicorn[5707]: [2025-11-18 13:12:14 +0000] [5707] [INFO] Listening at: http://127.0.0.1:8000 (5707)
+Nov 18 13:12:14 sdg gunicorn[5707]: [2025-11-18 13:12:14 +0000] [5707] [INFO] Using worker: gevent
+Nov 18 13:12:14 sdg gunicorn[5708]: [2025-11-18 13:12:14 +0000] [5708] [INFO] Booting worker with pid: 5708
+Nov 18 13:12:14 sdg gunicorn[5709]: [2025-11-18 13:12:14 +0000] [5709] [INFO] Booting worker with pid: 5709
+Nov 18 13:12:14 sdg gunicorn[5710]: [2025-11-18 13:12:14 +0000] [5710] [INFO] Booting worker with pid: 5710

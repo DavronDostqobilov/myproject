@@ -11,7 +11,7 @@ urlpatterns = [
     path('quality/', views.quality, name='quality'),
     path('gender/', views.gender, name='gender'),
     path('economic/', views.economic, name='economic'),
-    path('peace/', views.peace, name='peace'),
+    path('pleace/', views.peace, name='peace'),
     path('partnerships/', views.partnerships, name='partnerships'),
     path('industry/', views.industry, name='industry'),
     # We have urls
@@ -52,8 +52,8 @@ urlpatterns = [
     path('partnerships/3/', views.partnerships3, name='partnerships3'),
     path('partnerships/4/', views.partnerships4, name='partnerships4'),
     #Peace, Justice and Strong Institutions URLs
-    path('peace/1/', views.place1, name='peace1'),
-    path('peace/2/', views.place2, name='peace2'),
+    path('pleace/1/', views.place1, name='pleace1'),
+    path('pleace/2/', views.place2, name='pleace2'),
     #Industry, Innovation and Infrastructure URLs
     path('industry/1/', views.industry1, name='industry1'),
     path('industry/2/', views.industry2, name='industry2'),
