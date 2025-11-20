@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-_pfl!181&_e&f4c$qd4i-eq))=*s#5-@3qx=bb+)(=bt+p6eau
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.38.0.11', '127.0.0.1', 'localhost', 'sdg.samdchti.uz']
+ALLOWED_HOSTS = ['sdg.samdchti.uz', 'www.sdg.samdchti.uz', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -75,16 +75,24 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 # settings.py
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sdg_db',                      # 2-bosqichda yaratgan bazangiz
-        'USER': 'admin',                   # 2-bosqichda yaratgan foydalanuvchi
-        'PASSWORD': 'ujr956u57pfi', # O'sha parolingiz
-        'HOST': 'localhost',                        # Serverning o'zida bo'lgani uchun 'localhost'
-        'PORT': '5432',                                 # Standart port (5432) ishlatiladi
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'sdg_db',                      # 2-bosqichda yaratgan bazangiz
+#         'USER': 'admin',                   # 2-bosqichda yaratgan foydalanuvchi
+#         'PASSWORD': 'ujr956u57pfi', # O'sha parolingiz
+#         'HOST': 'localhost',                        # Serverning o'zida bo'lgani uchun 'localhost'
+#         'PORT': '5432',                                 # Standart port (5432) ishlatiladi
+#     }
+#}
 
 
 # Password validation
