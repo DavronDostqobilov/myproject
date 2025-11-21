@@ -1,17 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import News, Media
+
+
 
 # Create your views here.
 def index(request):
     # Bu funksiya 'templates' papkasidagi 'home.html' faylini topadi
     # va uni brauzerga yuboradi.
     return render(request, 'base.html')
+    
 def report_view(request):
     return render(request, "report.html")
-from django.shortcuts import render, get_object_or_404
-from .models import News
 
-from django.shortcuts import render, get_object_or_404
-from .models import News
+
+
 
 def news_list(request):
     news = News.objects.filter(is_published=True).order_by('-created_at')
@@ -21,8 +23,6 @@ def news_detail(request, id):
     item = get_object_or_404(News, id=id, is_published=True)
     return render(request, 'news/news_detail.html', {'item': item})
 
-from django.shortcuts import render
-from .models import Media
 
 def media_list(request):
     media = Media.objects.filter(is_published=True).order_by('-created_at')
@@ -33,7 +33,7 @@ def policy(request):
         'policies': [1,2,3,4,5,6,7]
     })
 
-from django.shortcuts import render
+
 
 def quality(request):
     return render(request, 'projects/quality.html')
@@ -60,6 +60,7 @@ def student_engagement_view(request):
 
 def student_womens_empowerment(request):
     return render(request, "we_have/womens_empowerment.html")
+
 def sustainable_economy(request):
     return render(request, "we_have/sustainable_economy.html")
 

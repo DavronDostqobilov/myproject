@@ -1,3 +1,158 @@
+# from pathlib import Path
+# import os
+
+# BASE_DIR = Path(__file__).resolve().parent.parent
+
+# SECRET_KEY = 'django-insecure-_pfl!181&_e&f4c$qd4i-eq))=*s#5-@3qx=bb+)(=bt+p6eau'
+
+# DEBUG = True   # ❗ Productionda doim False
+
+# ALLOWED_HOSTS = ["sdg.samdchti.uz", "www.sdg.samdchti.uz"]
+
+# INSTALLED_APPS = [
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles',
+#     'apps.api.apps.ApiConfig',
+# ]
+
+# MIDDLEWARE = [
+#     'django.middleware.security.SecurityMiddleware',
+#     'django.contrib.sessions.middleware.SessionMiddleware',
+#     'django.middleware.common.CommonMiddleware',
+#     'django.middleware.csrf.CsrfViewMiddleware',
+#     'django.contrib.auth.middleware.AuthenticationMiddleware',
+#     'django.contrib.messages.middleware.MessageMiddleware',
+#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+# ]
+
+# ROOT_URLCONF = 'myproject.urls'
+
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [BASE_DIR / 'templates'],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 'django.template.context_processors.request',
+#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.messages.context_processors.messages',
+#             ],
+#         },
+#     },
+# ]
+
+# WSGI_APPLICATION = 'myproject.wsgi.application'
+
+# # ------------------------------
+# # ▶️ DATABASE (SQLite3)
+# # ------------------------------
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# # ------------------------------
+# # ▶️ Password Validators
+# # ------------------------------
+# AUTH_PASSWORD_VALIDATORS = [
+#     {
+#         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+#     },
+#     {
+#         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+#     },
+#     {
+#         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+#     },
+#     {
+#         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+#     },
+# ]
+
+# LANGUAGE_CODE = 'en-us'
+# TIME_ZONE = 'Asia/Tashkent'
+# USE_I18N = True
+# USE_TZ = True
+
+# # ------------------------------
+# # ▶️ STATIC & MEDIA 
+# # ------------------------------
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/media/'
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static',
+# ]
+
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+# MEDIA_ROOT = BASE_DIR / 'media'
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# # ------------------------------
+# # ▶️ SECURITY (Production)
+# # ------------------------------
+# SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_BROWSER_XSS_FILTER = True
+
+# SECURE_HSTS_SECONDS = 31536000
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_PRELOAD = True
+
+# X_FRAME_OPTIONS = 'DENY'
+
+# # ------------------------------
+# # ▶️ LOGGING
+# # ------------------------------
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'file': {
+#             'level': 'ERROR',
+#             'class': 'logging.FileHandler',
+#             'filename': BASE_DIR / 'error.log',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['file'],
+#             'level': 'ERROR',
+#             'propagate': True,
+#         },
+#     },
+# }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 """
 Django settings for myproject project.
 
@@ -26,8 +181,15 @@ SECRET_KEY = 'django-insecure-_pfl!181&_e&f4c$qd4i-eq))=*s#5-@3qx=bb+)(=bt+p6eau
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sdg.samdchti.uz', 'www.sdg.samdchti.uz', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    "sdg.samdchti.uz",
+    "localhost",
+    "127.0.0.1",
+    "10.38.0.11"
+]
 
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
@@ -129,19 +291,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 # 1. Loyiha statik fayllarining manbasi (Sizning loyiha kodingizdagi .html, .css va .js fayllari joylashgan joy).
 # Bu yerda sizning logo_white.png faylingiz turgan joy bo'ladi.
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'), 
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'), 
+# ]
 
 # 2. collectstatic buyrug'i barcha fayllarni yig'ib kelib JOYLASHTIRADIGAN yakuniy joy.
 # U STATICFILES_DIRS bilan butunlay boshqa papka bo'lishi kerak.
 # Masalan, 'static_cdn' deb nomlang.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/var/www/myproject/staticfiles'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
